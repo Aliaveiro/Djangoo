@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+{%load static %}
+
+
+
+<div class="box">
+	<a class="button" href="#popup1">Let me Pop up</a>
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+
+
+  <head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="testbox">
+    <form method="POST">
+      {{form}}
+      {% csrf_token %}
+
+
+      <div class="btn-block">
+      <input type="submit"  value="Ajouter" >
+      </div>
+    </form>
+    </div>
+ 	</div>
+	</div>
+</div>
+
+ </body>
+</html>
